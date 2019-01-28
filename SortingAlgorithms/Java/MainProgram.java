@@ -7,6 +7,7 @@
 //		2. MergeSort
 //		3. SelectionSort
 //		4. Recursive SelectionSort
+//		5. InsertionSort
 //
 import java.util.ArrayList;
 
@@ -78,6 +79,9 @@ public class MainProgram {
 				break;
 			case 4:
 				sortingObject = new RecursiveSelectionSort();
+				break;
+			case 5:
+				sortingObject = new InsertionSort();
 				break;
 			default:
 				sortingObject = new QuickSort();
