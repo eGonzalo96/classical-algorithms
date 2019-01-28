@@ -5,6 +5,7 @@
 //	Algorithms supported until this commit:
 //		1. QuickSort
 //		2. MergeSort
+//		3. SelectionSort
 //
 import java.util.ArrayList;
 
@@ -25,7 +26,6 @@ public class MainProgram {
 		if(args.length < 1) {
 			sortingObject = getSortingObject(1);
 		} else {
-			System.out.println("Entró aquí.");
 			sortingObject = getSortingObject(
 					Integer.parseInt(args[0]));
 		}
@@ -48,6 +48,8 @@ public class MainProgram {
 		
 		System.out.println("List of integers: " + listToSort.toString());
 		sortingObject.sort(listToSort);
+		System.out.println("Algorithm: " + 
+				sortingObject.getClass().toString());
 		System.out.println("Sorting the list: " + listToSort.toString());
 		
 	}
@@ -69,6 +71,7 @@ public class MainProgram {
 				sortingObject = new MergeSort();
 				break;
 			case 3:
+				sortingObject = new SelectionSort();
 				break;
 			default:
 				sortingObject = new QuickSort();
