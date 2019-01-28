@@ -6,6 +6,7 @@
 //		1. QuickSort
 //		2. MergeSort
 //		3. SelectionSort
+//		4. Recursive SelectionSort
 //
 import java.util.ArrayList;
 
@@ -56,8 +57,10 @@ public class MainProgram {
 	
 	
 	//
-	// Method returning a SortingObject. 
-	// 
+	//	Method returning a SortingObject. If you want to add a new
+	// 		algorithm, you need to create a new SortingClass object
+	//		(through the SortingClass interface) and create the
+	//		corresponding object in a new case.
 	//
 	public static SortingClass getSortingObject(int sortingAlgorithm) {
 		
@@ -72,6 +75,9 @@ public class MainProgram {
 				break;
 			case 3:
 				sortingObject = new SelectionSort();
+				break;
+			case 4:
+				sortingObject = new RecursiveSelectionSort();
 				break;
 			default:
 				sortingObject = new QuickSort();
